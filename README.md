@@ -42,6 +42,7 @@
         unsatisfyingly complicated solution.  Feels like there should be a
         simpler way
       - [code](https://github.com/amarshah/complex_RNN)
+      - [interesting discussion on reddit](https://www.reddit.com/r/MachineLearning/comments/3uk2q5/151106464_unitary_evolution_recurrent_neural/)
   - [Batch normalization](http://arxiv.org/abs/1502.03167)
     - Renormalizes the outputs from each layer to save higher layers from
       having to constantly learn the variances of the layers below
