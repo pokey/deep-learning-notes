@@ -1,0 +1,3 @@
+- [Bayesian neural nets](http://www.psi.toronto.edu/publications/2011/Bioinformatics2011.pdf)
+  - Seems interesting
+  - Theoretically ideal in some ways, but too slow in practice
