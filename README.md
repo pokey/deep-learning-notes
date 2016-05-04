@@ -16,6 +16,7 @@
         vanishing / exploding gradients
       - [uRNN paper](http://arxiv.org/abs/1511.06464) claims that it doesn't
         work very well:
+
         > We found the IRNN to be particularly unstable; it only ran without
         > blowing up with
         > incredibly low learning rates and gradient clipping. Since the
