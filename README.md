@@ -1,12 +1,6 @@
-- Overview
-  - [In Nature](http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf)
-- Tutorials
-  - From Quoc Le
-    - http://ai.stanford.edu/~quocle/tutorial1.pdf
-    - http://ai.stanford.edu/~quocle/tutorial2.pdf
 - Weight initialization
   - [Random walk initialization for training very deep feedforward
-    networks](http://arxiv.org/abs/1412.6558)
+    networks](http://arxiv.org/abs/1412.6558) **(preferred)**
     - View deep network as random walk on logs of norms of vectors
     - Rescale weight matrices to make walk unbiased
     - Used by http://arxiv.org/abs/1511.03771
@@ -29,11 +23,10 @@
       - Claims improved performance
 - Architecture
   - Nonlinearity
-    - ReLU's are very popular right now
+    - ReLUs **(preferred)**
     - tanh is more popular for RNNs
   - RNNs
-    - [LSTM](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf)
-      - Very popular right now
+    - [LSTM](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) **(preferred)**
     - [uRNN](http://arxiv.org/abs/1511.06464)
       - Enforces that weight matrix has eigenvalues all identically 1
       - Does this by decomposing transition matrices and making them
@@ -43,7 +36,7 @@
         simpler way
       - [code](https://github.com/amarshah/complex_RNN)
       - [interesting discussion on reddit](https://www.reddit.com/r/MachineLearning/comments/3uk2q5/151106464_unitary_evolution_recurrent_neural/)
-  - [Batch normalization](http://arxiv.org/abs/1502.03167)
+  - [Batch normalization](http://arxiv.org/abs/1502.03167) **(preferred)**
     - Renormalizes the outputs from each layer to save higher layers from
       having to constantly learn the variances of the layers below
     - Defines *Internal Covariate Shift*
@@ -52,6 +45,7 @@
     - [Applied to RNNs](http://arxiv.org/abs/1603.09025)
 - Regularization
   - [Dropout](http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf)
+    **(preferred)**
     - Randomly turn off nodes during training, and rescale output during
       testing
     - Extremely simple yet effective form of regularization
@@ -61,10 +55,11 @@
     of regularization, though they still seem to use L2 in addition
 - Learning algorithm
   - Adaptive learning rate
-    - RMSProp (seems to be preferred)
-      - TODO: Find paper that claims it is an improved version of this
+    - RMSProp **(preferred)**
+    - [ESGD](http://arxiv.org/abs/1502.04390) *(promising)*
+      - Alternative preconditioner trying to attach saddle points
     - [AdaGrad](http://www.magicbroom.info/Papers/DuchiHaSi10.pdf)
-  - Momentum
+  - Momentum **(preferred)**
     - TODO: More info
 - Tricks
   - Grid search on learning rate and dropout percentage
@@ -82,5 +77,3 @@
     - LSTM
     - 3 approaches described in iRNN paper
       - Optimization algorithm
-- Applications
-  - [Language modeling](http://u.cs.biu.ac.il/~yogo/nnlp.pdf)

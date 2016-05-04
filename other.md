@@ -1,0 +1,11 @@
+- Overview
+  - [In Nature](http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf)
+- Tutorials
+  - From Quoc Le
+    - http://ai.stanford.edu/~quocle/tutorial1.pdf
+    - http://ai.stanford.edu/~quocle/tutorial2.pdf
+- Important papers
+  - [Hinton 2006](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.443.8824&rep=rep1&type=pdf)
+    - Spawned the current wave of deep learning research
+- Applications
+  - [Language modeling](http://u.cs.biu.ac.il/~yogo/nnlp.pdf)
