@@ -7,5 +7,8 @@
 - Important papers
   - [Hinton 2006](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.443.8824&rep=rep1&type=pdf)
     - Spawned the current wave of deep learning research
+- Reinforcement learning
+  - [Mnih et al 2013](http://arxiv.org/abs/1312.5602)
 - Applications
   - [Language modeling](http://u.cs.biu.ac.il/~yogo/nnlp.pdf)
+  - [Google parsing paper](http://arxiv.org/abs/1603.06042)

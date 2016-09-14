@@ -27,6 +27,7 @@
     - tanh is more popular for RNNs
   - RNNs
     - [LSTM](http://deeplearning.cs.cmu.edu/pdfs/Hochreiter97_lstm.pdf) **(preferred)**
+      - [tutorial](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
     - [uRNN](http://arxiv.org/abs/1511.06464)
       - Enforces that weight matrix has eigenvalues all identically 1
       - Does this by decomposing transition matrices and making them
@@ -66,6 +67,7 @@
     - Used in [npRNN](http://arxiv.org/abs/1511.03771)
 - RNNs (TODO: fill out more, referencing above papers)
   - Vanishing / Exploding gradients
+    - [The problem](http://www-dsi.ing.unifi.it/~paolo/ps/tnn-94-gradient.pdf)
     - [Orthogonal RNNs](http://arxiv.org/abs/1602.06662)
       - Explicitly constructs RNN solutions to 2 common toy problems
       - Uses this to understand why iRNNs vs orthogonal RNN work well for some
