@@ -1,0 +1,5 @@
+- [Hidden technical debt paper](https://papers.nips.cc/paper/5656-hidden-technical-debt-in-machine-learning-systems.pdf)
+- Parameter servers
+  - For large-scale distributed machine learning
+  - [paper](https://www.cs.cmu.edu/~muli/file/parameter_server_osdi14.pdf)
+  - [impl](https://github.com/dmlc/ps-lite)
