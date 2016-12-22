@@ -37,6 +37,8 @@
         simpler way
       - [code](https://github.com/amarshah/complex_RNN)
       - [interesting discussion on reddit](https://www.reddit.com/r/MachineLearning/comments/3uk2q5/151106464_unitary_evolution_recurrent_neural/)
+   - [projection layer](http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43905.pdf)
+      - Implemented in TensorFlow
   - [Batch normalization](http://arxiv.org/abs/1502.03167) **(preferred)**
     - Renormalizes the outputs from each layer to save higher layers from
       having to constantly learn the variances of the layers below
@@ -44,6 +46,7 @@
     - Allows much higher learning rates and less careful initialization of
       parameters
     - [Applied to RNNs](http://arxiv.org/abs/1603.09025)
+    - [Implementation in TF](https://github.com/OlavHN/bnlstm/blob/master/lstm.py)
 - Regularization
   - [Dropout](http://jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf)
     **(preferred)**

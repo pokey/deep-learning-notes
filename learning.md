@@ -1,0 +1,2 @@
+- [Efficient BackProp](http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf)
+  - About how to get backpropagation to converge

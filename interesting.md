@@ -1,3 +1,9 @@
 - [Bayesian neural nets](http://www.psi.toronto.edu/publications/2011/Bioinformatics2011.pdf)
   - Seems interesting
   - Theoretically ideal in some ways, but too slow in practice
+- [Model that learns generative model for params of RNN](http://blog.otoro.net/2016/09/28/hyper-networks/)
+- [New perspective on attention](http://distill.pub/2016/augmented-rnns/)
+- [Differentiable neural computer](http://www.nature.com/nature/journal/v538/n7626/full/nature20101.html)
+  - [blog post](https://deepmind.com/blog/differentiable-neural-computers/)
+  - [equations](http://www.nature.com/nature/journal/v538/n7626/extref/nature20101-s1.pdf)
+  - [one implementation](https://github.com/yos1up/DNC)

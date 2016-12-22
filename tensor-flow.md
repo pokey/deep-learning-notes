@@ -1,0 +1,4 @@
+- RNN
+  - [tflearn](https://github.com/tflearn/tflearn)
+    - [RNNs](https://github.com/tflearn/tflearn/blob/master/tflearn/layers/recurrent.py)
+    - [LSTMs](https://github.com/tflearn/tflearn/blob/master/examples/nlp/lstm.py)
