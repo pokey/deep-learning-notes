@@ -1,0 +1,225 @@
+%SZ  update of Peng update 10/24/16
+\documentclass[12pt,reqno]{amsart}
+
+%\usepackage[active]{srcltx}
+%\usepackage{wrapfig}
+%\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{hyperref} %%-This make a table of content in the pdf file. 
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+
+
+
+\headheight=6.15pt \textheight=8.75in \textwidth=6.5in
+\oddsidemargin=0in \evensidemargin=0in \topmargin=0in
+
+
+%%%%%%% Mark Comment %%%
+\usepackage{color}
+\newcommand{\blue}{\color{blue}}
+\newcommand{\red}{\color{red}}
+\newcommand{\edit}[1]{{\color{red}{$\clubsuit$#1$\clubsuit$}}}
+\newcommand{\cs}{$\clubsuit$}
+%\usepackage[normalem]{ulem} %\sout{ thing to strikeout}
+%\usepackage{showkeys}  % THIS SHOWS LABELS
+
+
+
+
+\newcommand{\Sch}{Schr\"odinger }
+\newcommand{\szego}{Szeg\H{o} }
+
+
+\newcommand{\baa}{\begin{align*}}
+\newcommand{\eaa}{\end{align*}}
+\newcommand{\bea}{\begin{eqnarray*} }
+\newcommand{\eea}{\end{eqnarray*} }
+\newcommand{\beq}{\begin{equation} }
+\newcommand{\eeq}{\end{equation} }
+\newcommand{\bp}{\begin{prop}}
+\newcommand{\ep}{\end{prop}}
+\newcommand{\bt}{\begin{theorem}}
+\newcommand{\et}{\end{theorem}}
+\newcommand{\bpf}{\begin{proof}}
+\newcommand{\epf}{\end{proof}}
+\newcommand{\bl}{\begin{lem}}
+\newcommand{\el}{\end{lem}}
+\newcommand{\bc}{\begin{cor}}
+\newcommand{\ec}{\end{cor}}
+\newcommand{\bd}{\begin{defn}}
+\newcommand{\ed}{\end{defn}}
+\newcommand{\be}{\begin{equation} }
+\newcommand{\ee}{\end{equation} }
+\newcommand{\bee}{\begin{eqnarray} }
+\newcommand{\eee}{\end{eqnarray} }
+
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\C}{{\mathbb C}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\B}{{\mathbb B}}
+\newcommand{\E}{{\mathbf E}}
+
+
+\newcommand{\acal}{\mathcal{A}}
+\newcommand{\bcal}{\mathcal{B}}
+\newcommand{\ccal}{\mathcal{C}}
+\newcommand{\dcal}{\mathcal{D}}
+\newcommand{\ecal}{\mathcal{E}}
+\newcommand{\fcal}{\mathcal{F}}
+\newcommand{\gcal}{\mathcal{G}}
+\newcommand{\hcal}{\mathcal{H}}
+\newcommand{\ical}{\mathcal{I}}
+\newcommand{\jcal}{\mathcal{J}}
+\newcommand{\kcal}{\mathcal{K}}
+\newcommand{\lcal}{\mathcal{L}}
+\newcommand{\mcal}{\mathcal{M}}
+\newcommand{\ncal}{\mathcal{N}}
+\newcommand{\ocal}{\mathcal{O}}
+\newcommand{\pcal}{\mathcal{P}}
+\newcommand{\qcal}{\mathcal{Q}}
+\newcommand{\rcal}{\mathcal{R}}
+\newcommand{\scal}{\mathcal{S}}
+\newcommand{\tcal}{\mathcal{T}}
+\newcommand{\ucal}{\mathcal{U}}
+\newcommand{\vcal}{\mathcal{V}}
+\newcommand{\zcal}{\mathcal{Z}}
+
+\DeclareMathOperator{\Ai}{Ai}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\Den}{Den}
+\DeclareMathOperator{\grad}{grad}
+
+
+\newcommand{\lan}{\langle}
+\newcommand{\ran}{\rangle}
+\newcommand{\lra}{\leftrightarrow}
+\newcommand{\RA}{\Rightarrow}
+\newcommand{\pa}{\partial}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\ihbar}{{\frac{i}{h}}}
+\newcommand{\tchi}{\tilde{\chi}}
+\newcommand{\ZN}{|Z_{\Phi_{\hbar, E}}|}
+\newcommand{\inprod}[2]{\ensuremath{\left\langle#1,#2\right\rangle}}
+\newcommand{\twiddle}[1]{\ensuremath{\widetilde{#1}}}
+\newcommand{\W}{\ensuremath{\Omega}}
+\newcommand{\RM}{\backslash}
+\newcommand{\gives}{\ensuremath{\rightarrow}}
+\newcommand{\x}{\ensuremath{\times}}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\lr}[1]{\ensuremath{\left(#1\right)}}
+\newcommand{\dell}{\ensuremath{\partial}}
+\newcommand{\half}{{\textstyle \frac 12}}
+\newcommand{\vol}{{\operatorname{Vol}}}
+
+\renewcommand{\Re}{{\text Re}}
+\newcommand{\w}{\omega}
+
+
+
+%%% Theorem %%%%
+
+\newtheorem{theo}{{\sc Theorem}}[section]
+\newtheorem{lem}[theo]{{\sc Lemma}}
+\newtheorem{prop}[theo]{{\sc Proposition}}
+\newtheorem{defn}[theo]{{\sc Definition}}
+\newtheorem{cor}[theo]{{\sc Corollary}}
+\newtheorem{remark}{{\sc Remark}}
+
+
+
+
+
+
+\title{Backpropagation}
+
+
+
+
+         
+\begin{document}
+\author{Boris Hanin, Pokey Rule}
+
+\address{Department of Mathematics, MIT, Cambridge, MA 02139}
+\email[B. Hanin]{bhanin@mit.edu}
+\address{??}
+\email[P. Rule]{pokey.rule@gmail.com}
+
+\maketitle
+The goal of this note is to explain weight update by backpropagation for a neural network. Formally, a neural network is the following data
+\[\mathcal N := \set{(V, E),\,\,   \mathcal L:V\gives \R,\,\, \sigma:V\gives \text{NL}}.\]
+Here, $(V,E)$ is the directed acylic graph whose vertices (resp. edges) represent the neurons (resp. connections), $\mathcal L$ is the loss function, and $\text{NL}$ is a collection of possibly non-linear activations (including $\mathcal L$) so that $\sigma_v$ is the non-linearity at neuron $v.$ 
+
+In addition to the data of $\mathcal N,$ we are given a state (i.e initialization of all weights) 
+\[W\lr{\mathcal N}=\set{w: E\gives \R}\]
+as well as the incoming signals strengths
+\[\text{IN}(\mathcal N)=\set{in:V\gives \R}\]
+of all nodes after seeding $\mathcal N$ with (say, a batch of) training data. We denote by 
+\[\text{OUT}(\mathcal N)=\set{out(v):=\sigma_v(in(v))}_{v\in V}\]
+the resulting outgoing signals.\\
+\linebreak
+{\bf The Goal} of backpropagation is to update wieghts by gradient descent on the loss function, which requires computing
+\begin{equation}
+\frac{\partial \mathcal L}{\partial w(e)},\qquad \text{for each }e\in E.\label{E:Goal}
+\end{equation}
+Moreover, we require an algorithm with complexity $\lambda(\mathcal N),$ the runtime of $\mathcal N$ on a batch of training data. \\
+\linebreak
+\noindent It is convenient to augment $\mathcal N$ to include the loss function as a node by replacing
+\[V\mapsto \twiddle{V}:=V\cup \set{\text{Loss}}\] 
+Let us write $\mathcal N_{\text{loss}}$ for the minimal collection of nodes so that $\mathcal L$ depends only on their activations $y(v)$. Then we replace
+\[E\mapsto \twiddle{E}:=E\cup \set{v\gives\text{Loss}}_{v\in \mathcal N_\text{Loss}}\]
+and set 
+\[in(\text{Loss})=\lr{\set{out(v)}_{v\in \mathcal N_{\text{Loss}}}}.\]
+so that $out(\text{Loss})=\mathcal L.$. We write 
+\[\twiddle{\mathcal N}=\set{(\twiddle{V},  \twiddle{E}), \text{OUT}:\twiddle{V}\gives \R,\,\, \text{IN}: \twiddle{E}\gives  \R, \sigma: \twiddle{V}\gives \text{NL}}\]
+for the augmented network and state. Because $(\twiddle{V},\twiddle{E})$ inherits being an acyclic directed graph from $\mathcal N$, there exists an enumeration 
+\[\twiddle{V}=\set{v_0=\text{Loss},v_1,\ldots, v_{\abs{V}}}\]
+so that for each $j=0,\ldots, \abs{V}$ 
+\[v_j\quad \text{is a sink after removing } \set{v_0,\ldots, v_{j-1}}\text{  and  } \set{N_{v_i}}_{i=0}^{j-1}.\]
+Observe that $v_0=\text{Loss}.$ Such an enumeration is simple to write by hand for many popular neural nets and be calculated during training. The essence of backpropagation is the observation that $\mathcal L$ depends on a weight $w$ attached to an edge $v'\gives v$ only via $OUT(v).$ Hence, by the chain rule, 
+\[\frac{\partial \mathcal L }{\partial  w}=\frac{\partial \mathcal L }{\partial  \text{OUT}(v)}\cdot\frac{\partial \text{OUT}(v)}{\partial \text{IN}(v)}\cdot \frac{\partial \text{IN}(v)}{\partial w}.\]
+Note that 
+\begin{equation}
+\frac{\partial \text{OUT}(v)}{\partial \text{IN}(v)}=\frac{d}{dz}\big|_{z=\text{IN}(v)} \sigma_v(z)\qquad \text{and}\qquad  \frac{\partial \text{IN}(v)}{\partial w}= \text{OUT}(v')
+\end{equation}
+are given quantities. Computing the expression in \eqref{E:Goal} thus reduces to comuting 
+\[\frac{\partial L}{\partial out(v)}\qquad \text{for all }v\in V.\]
+This this done by the following algorithm:\\
+\linebreak
+\# $\text{back}[v]$ denotes the set of vertices with an edge into $v$\\
+\linebreak
+$\text{in\_grad}=\text{zeros}(\abs{V})$\\
+$\text{out\_grad}=\text{zeros}(\abs{V})$\\  
+\linebreak
+\# initialize $\text{out\_grad}$\\
+\linebreak
+{\bf for} $v_n$ in $\text{back}[v_0]$: \quad $\text{out\_grad}[j]=\frac{\partial \mathcal L}{\partial \text{out}(v_n)}$\\
+\linebreak
+{\bf for} $n=1,\ldots, \abs{V}$ and $v\ \in \text{back}(v_{n-1})$:\\
+\linebreak
+\indent $\text{in\_grad}[v]=\text{out\_grad}[v]\cdot \frac{d}{dz}\big|_{z=\text{in}(v)}\sigma_{v_j}(z)$\qquad \# update $\text{in\_grad}$ \\
+\linebreak
+\indent {\bf for} $v_k\in \text{back}[v_j]$:\\
+\linebreak
+ \indent \indent $\text{out\_grad}[v_k]+= \text{in\_grad}[v_j]\cdot w(v_k\gives v_j)$\qquad \# pass back $\text{out\_grad}$\\
+%$\text{grad}[v]+=\text{grad}[v_n]\cdot
+%\frac{d}{dy}\big|_{y=y(v_n)}\sigma(v_n)'(y)\cdot w(v\gives v_n)$\\
+\linebreak
+{\bf return} $\text{out\_grad}$\\
+\end{document}
+
+
+
+
+
+
