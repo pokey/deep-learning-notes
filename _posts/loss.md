@@ -1,0 +1,6 @@
+- [connectionist temporal classification](http://machinelearning.wustl.edu/mlpapers/paper_files/icml2006_GravesFGS06.pdf)
+  - Loss function for sequence to sequence like speech recognition
+  - Assumes output sequence has len less than or equal to input
+  - Output a label or an empty symbol for every input symbol
+  - Implemented in keras
+  - Baidu has an [impl](https://github.com/baidu-research/warp-ctc)
