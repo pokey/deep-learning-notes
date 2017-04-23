@@ -1,0 +1,6 @@
+- Libraries
+  - [edward](http://edwardlib.org/)
+    - Built on TensorFlow and works with Keras
+    - [paper](https://arxiv.org/pdf/1701.03757.pdf)
+- Blog posts
+  - [On PyMC blog](http://pymc-devs.github.io/pymc3/notebooks/bayesian_neural_network_advi.html)
