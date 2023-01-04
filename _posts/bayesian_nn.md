@@ -4,3 +4,6 @@
     - [paper](https://arxiv.org/pdf/1701.03757.pdf)
 - Blog posts
   - [On PyMC blog](http://pymc-devs.github.io/pymc3/notebooks/bayesian_neural_network_advi.html)
+- Papers
+  - [Bayesian Recurrent Neural Networks](https://arxiv.org/abs/1704.02798)
+  - [Practical Variational Inference for Neural Networks](https://papers.nips.cc/paper/4329-practical-variational-inference-for-neural-networks)
